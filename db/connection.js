@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const mongoURI = 'mongodb://localhost:27017/holidays'
+const mongoURI = 'mongodb://localhost:27017/posts'
 
 mongoose.connect( mongoURI, {
     useNewUrlParser: true,

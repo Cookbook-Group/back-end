@@ -5,7 +5,7 @@ const postsSchema = new mongoose.Schema({
     name: {type: String, required: true},
     description: {type: String, default: 'Best Holiday Ever!'},
     likes: {type: Number, default: 0},
-    tags: [{type:String}]
+    tags: [{type: String}]
 })
 
 const Posts = mongoose.model('Posts', postsSchema)
