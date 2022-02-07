@@ -1,21 +1,53 @@
+require('dotenv').config()
 const express= require ('express');
 const app= express();
-const PORT= 4000;
+
+const SESSION_SECRET = process.env.SESSION_SECRET
+const PORT= process.env.PORT || 4004;
+const helmet = require("helmet")
+const morgan = require("morgan")
+
 const cors = require('cors')
+const passport = require("passport")
+const passportSetup = require("./passport")
+const cookieSession = require("cookie-session")
+
 const postsController = require('./controllers/posts')
+const authController = require('./controllers/auth')
+const userController = require('./controllers/user')
 
-
-app.use(cors())
+app.use(
+    cookieSession({ name: "session", keys: SESSION_SECRET, maxAge: 24 * 60 * 60 * 100 })
+  )
+app.use(cors({
+    origin: "http://localhost:3000",
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
+}))
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
+app.use(helmet())
+app.use(morgan("common"))
 
+app.use(passport.initialize())
+app.use(passport.session())
+
+
+const session = require('express-session');
+
+app.use(session({
+    secret: SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+}))
 
 app.use('/posts',postsController)
-
+app.use('/auth',authController)
+app.use('/users', userController)
 
 
 
 app.listen(PORT,() => {
-    console.log('Posting recipes!')
+    console.log(`Posting recipes!✅ PORT: ${PORT} 🌟`)
     
 })
