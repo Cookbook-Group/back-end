@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express= require ('express');
 const app= express();
+const session = require('express-session');
 
 const SESSION_SECRET = process.env.SESSION_SECRET
 const PORT= process.env.PORT || 4004;
@@ -16,6 +17,8 @@ const postsController = require('./controllers/posts')
 const authController = require('./controllers/auth')
 const userController = require('./controllers/user')
 
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
 app.use(
     cookieSession({ name: "session", keys: SESSION_SECRET, maxAge: 24 * 60 * 60 * 100 })
   )
@@ -24,16 +27,13 @@ app.use(cors({
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
 }))
-app.use(express.json())
-app.use(express.urlencoded({extended:false}))
+
 app.use(helmet())
 app.use(morgan("common"))
 
 app.use(passport.initialize())
 app.use(passport.session())
 
-
-const session = require('express-session');
 
 app.use(session({
     secret: SESSION_SECRET,
@@ -44,7 +44,6 @@ app.use(session({
 app.use('/posts',postsController)
 app.use('/auth',authController)
 app.use('/users', userController)
-
 
 
 app.listen(PORT,() => {
