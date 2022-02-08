@@ -9,7 +9,7 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:4004/auth/google/callback",
+    callbackURL: "http://localhost:3000/auth/google/callback",
     passReqToCallback: true,
 },
 async (req, accessToken, refreshToken, profile, cb) => {
@@ -39,14 +39,8 @@ passport.serializeUser((user, cb) => {
 });
 
 passport.deserializeUser( async (id, cb) => {
-    const user = await User.findOne({ where: { id } }).catch((err) => {
-        console.log("Error deserializing", err);
-        cb(err, null);
-      });
-    
-      console.log("DeSerialized user", user);
-    
-      if (user) cb(null, user);
+    const user = await User.findById({ id },(err,user))
+      cb(err, user);
 });
 
      
