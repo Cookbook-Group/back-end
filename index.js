@@ -1,7 +1,8 @@
-require('dotenv').config()
+
 const express= require ('express');
 const app= express();
 const session = require('express-session');
+require('dotenv').config()
 
 const SESSION_SECRET = process.env.SESSION_SECRET
 const PORT= process.env.PORT || 4004;
