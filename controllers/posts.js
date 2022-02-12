@@ -14,14 +14,15 @@ router.get("/", (req, res) => {
   });
 });
 //Create/Post Route
-router.post("/", async (req, res) => {
-  const newPost = await new Posts(req.body);
-  res.status(200).json(newPost);
-  try {
-    res.status(400).json({ err: err.message });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+router.post("/", (req, res) => {
+  Posts.create(req.body, (err, p) => {
+    if (err) {
+      res.status(500).json(err);
+      return;
+    }
+
+    res.status(200).json(p);
+  });
 });
 
 //Show Route
@@ -96,20 +97,19 @@ router.get("/:id", async (req, res) => {
 });
 
 //get timeline post
-router.get('/timeline/all', async (req,res)=>{
+router.get("/timeline/all", async (req, res) => {
   let postArray = [];
-  try{
-    const currentUser = await Users.findById(req.body.userId)
-    const userPosts = await Posts.find({ userId: currentUser._id});
-    const friendPosts = await Promise.all(currentUser.followings.map((friendId) => {
-      Posts.find({userId: friendId});
-
-    })
-    ) 
-    res.json(userPosts.concat(...friendPosts))
-  } catch (err){
-    res.status(500).json(err)
-
+  try {
+    const currentUser = await Users.findById(req.body.userId);
+    const userPosts = await Posts.find({ userId: currentUser._id });
+    const friendPosts = await Promise.all(
+      currentUser.followings.map((friendId) => {
+        Posts.find({ userId: friendId });
+      })
+    );
+    res.json(userPosts.concat(...friendPosts));
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
