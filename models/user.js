@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
     },
     profilePicture: {
         type: String,
-        default: "",
+        default: "image/icon_avatar.png",
     },
     googleId: String,
     isAdmin: {
