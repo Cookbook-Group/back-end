@@ -35,14 +35,17 @@ router.get("/:id", (req, res) => {
     res.status(200).json(posts);
   });
 });
+
 //Delete Route
 router.delete("/:id", async (req, res) => {
   try {
-    const post = await Posts.findByIdAndDelete(req.params.userId);
+    const post = await Posts.findByIdAndDelete(req.params.id);
     console.log(post);
     if (post) {
-      res.status(200).json("Your post has been deleted");
-    } else {
+      Posts.find({}, (err, allPosts) => {
+        res.status(200).json(allPosts)
+    })
+   } else {
       res.status(403).json("You can only delete your posts");
     }
   } catch (err) {
@@ -108,6 +111,17 @@ router.get("/timeline/all", async (req, res) => {
       })
     );
     res.json(userPosts.concat(...friendPosts));
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//Get all user posts
+router.get("/profile/:userId", async (req, res) => {
+  try {
+    const user = await Users.findById(req.params.id );
+    const posts = await Posts.find({ userId: user._id });
+    res.status(200).json(posts);
   } catch (err) {
     res.status(500).json(err);
   }
