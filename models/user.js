@@ -19,6 +19,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: "/image/icon_avatar.png",
     },
+    coverPicture: {
+        type: String,
+        default:"/image/foodCover.jpeg",
+    },
     googleId: String,
     isAdmin: {
         type: Boolean,
