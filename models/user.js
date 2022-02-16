@@ -17,7 +17,11 @@ const userSchema = new mongoose.Schema({
     },
     profilePicture: {
         type: String,
-        default: "image/icon_avatar.png",
+        default: "/image/icon_avatar.png",
+    },
+    coverPicture: {
+        type: String,
+        default:"/image/foodCover.jpeg",
     },
     googleId: String,
     isAdmin: {
