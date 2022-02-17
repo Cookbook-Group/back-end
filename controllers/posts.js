@@ -6,12 +6,16 @@ const Users = require("../models/user")
 
 //Index Route
 router.get("/", (req, res) => {
-  Posts.find({}, (err, posts) => {
+  Posts.find({}).populate('user') 
+  .exec((err,posts) => {
     if (err) {
       res.status(400).json({ err: err.message })
     }
     res.status(200).json(posts)
   })
+//   Posts.find({}, (err, posts) => {
+    
+//   })
 })
 //Create/Post Route
 router.post("/", (req, res) => {
