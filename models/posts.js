@@ -16,8 +16,8 @@ const postsSchema = new mongoose.Schema({
     calories: Number,
     recipes: [String],
     likes: {
-        type: Array, 
-        default: []
+        type: Number,
+        default: 0
     },
     tags: [{type: String}],
     user: {

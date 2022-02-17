@@ -58,19 +58,31 @@ router.delete("/:id", async (req, res) => {
 })
 
 //Update Route
-router.put("/:id", async (req, res) => {
-  try {
-    const post = await Posts.findById(req.params.id)
-    /* if (post.userId === req.body.userId) { */
-      await post.updateOne({ $set: req.body })
-      res.status(200).json("Post Updated")
-    /* } else {
-      res.status(403).json("You can only update your posts")
-    } */
-  } catch (err) {
-    res.status(500).json(err)
-  }
+router.put('/:id', (req,res) => {
+  Posts.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, allPost) => {
+      if(err){
+          res.status(400).json({err: err.message})
+      }
+      // res.status(200).json(updatedHoliday)
+      Posts.find({}, (err, allPosts) => {
+          res.status(200).json(allPosts)
+      })
+      
+  })
 })
+// router.put("/:id", async (req, res) => {
+//   try {
+//     const post = await Posts.findById(req.params.id)
+//     /* if (post.userId === req.body.userId) { */
+//       await post.updateOne({ $set: req.body })
+//       res.status(200).json("Post Updated")
+//     /* } else {
+//       res.status(403).json("You can only update your posts")
+//     } */
+//   } catch (err) {
+//     res.status(500).json(err)
+//   }
+// })
 
 // like/dislike a post
 router.put("/:id/like", async (req, res) => {
