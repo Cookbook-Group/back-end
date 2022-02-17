@@ -100,7 +100,7 @@ router.get("/:id", async (req, res) => {
 });
 
 //get timeline post
-router.get("/timeline/all", async (req, res) => {
+router.get("/timeline/:userId", async (req, res) => {
   let postArray = [];
   try {
     const currentUser = await Users.findById(req.body.userId);
@@ -120,7 +120,7 @@ router.get("/timeline/all", async (req, res) => {
 router.get("/profile/:userId", async (req, res) => {
   try {
     const user = await Users.findById(req.params.id );
-    const posts = await Posts.find({ userId: user._id });
+    const posts = await Posts.find({user:req.params.id});
     res.status(200).json(posts);
   } catch (err) {
     res.status(500).json(err);
