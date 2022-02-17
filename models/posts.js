@@ -19,7 +19,11 @@ const postsSchema = new mongoose.Schema({
         type: Array, 
         default: []
     },
-    tags: [{type: String}]
+    tags: [{type: String}],
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
 },
 { timestamps: true }
 )
