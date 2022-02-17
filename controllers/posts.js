@@ -24,8 +24,13 @@ router.post("/", (req, res) => {
       res.status(500).json(err)
       return
     }
-
-    res.status(200).json(p)
+    Users.findById(req.body.user, (err,user) => {
+      if (err) {
+        res.status(400).json(err)
+      }
+       p.user = user
+      res.status(200).json(p)
+    })
   })
 })
 
@@ -44,9 +49,10 @@ router.get("/:id", (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     const post = await Posts.findByIdAndDelete(req.params.id)
-    console.log(post)
+    
     if (post) {
-      Posts.find({}, (err, allPosts) => {
+      Posts.find({}).populate('user') 
+      .exec((err,allPosts)  => {
         res.status(200).json(allPosts)
       })
     } else {
