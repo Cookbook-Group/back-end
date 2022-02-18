@@ -15,6 +15,8 @@ const postsSchema = new mongoose.Schema({
     },
     calories: Number,
     recipes: [String],
+    ingredients: [String],
+    instructions: [String],
     likes: {
         type: Number,
         default: 0
