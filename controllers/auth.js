@@ -11,7 +11,7 @@ const isUserAuthenticated = (req, res, next) => {
   }
 };
 
-const CLIENT_URL = "http://localhost:3000/"
+const CLIENT_URL = process.env.FRONTEND_URL
 
 router.get("/google", passport.authenticate("google", { scope: ["profile","email"] }));
   
