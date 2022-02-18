@@ -1,16 +1,19 @@
 [
     {
+        "userId": "62097f514ad8399a08b5ffdf",
         "image": "https://static.onecms.io/wp-content/uploads/sites/9/2022/01/19/sweet-potato-cheesecake-empanadas-FT-RECIPE0222.jpg ",
-        "name":"Sweet Potato Cheesecake Empanadas",
-        "description": "dessert empanada ",
+        "title":"Sweet Potato Cheesecake Empanadas",
+        "calories": 864 ,
         "likes": 10,
-        "tags": ["dessert","cheesecake"]
+        "tags": ["dessert", "cheesecake"]
     },
     {
+    
+        "userId": "62097f514ad8399a08b5ffdf",
         "image": " https://images.immediate.co.uk/production/volatile/sites/2/2019/04/Dum-Aloo-e163632.jpg?quality=45&resize=768,574",
-        "name":"Dum aloo",
-        "description": "potatoes in a thick nut gravy",
-        "likes": 0,
-        "tags": ["Indian","Potatoes"]
+        "title":"Dum aloo",
+        "calories": 269,
+        "likes": 3,
+        "tags": ["Indian", "Potatoes"]
     } 
 ]

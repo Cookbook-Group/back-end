@@ -1,12 +1,32 @@
 const mongoose = require('../db/connection')
 
 const postsSchema = new mongoose.Schema({
-    image: {type: String, required: true},
-    name: {type: String, required: true},
-    description: {type: String, default: 'Best Holiday Ever!'},
-    likes: {type: Number, default: 0},
-    tags: [{type: String}]
-})
+    userId: {
+        type: String,
+        required: true,
+    },
+    image: {
+        type: String, 
+        required: true
+    },
+    title: {
+        type: String, 
+        required: true
+    },
+    calories: Number,
+    recipes: [String],
+    likes: {
+        type: Number,
+        default: 0
+    },
+    tags: [{type: String}],
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
+},
+{ timestamps: true }
+)
 
 const Posts = mongoose.model('Posts', postsSchema)
 
