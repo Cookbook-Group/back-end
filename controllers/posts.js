@@ -70,7 +70,8 @@ router.put('/:id', (req,res) => {
           res.status(400).json({err: err.message})
       }
       // res.status(200).json(updatedHoliday)
-      Posts.find({}, (err, allPosts) => {
+      Posts.find({}).populate('user') 
+      .exec((err,allPosts)  => {
           res.status(200).json(allPosts)
       })
       
