@@ -7,7 +7,7 @@ const SESSION_SECRET = process.env.SESSION_SECRET;
 const PORT = process.env.PORT || 4004;
 const helmet = require("helmet");
 const morgan = require("morgan");
-const {cloudinary} = require("./utils/cloudinary")
+const cloudinary  = require("./utils/cloudinary");
 
 const cors = require("cors");
 const passport = require("passport");
@@ -17,7 +17,7 @@ const cookieSession = require("cookie-session");
 const postsController = require("./controllers/posts");
 const authController = require("./controllers/auth");
 const userController = require("./controllers/user");
-const uploadsController = require("./controllers/uploads");
+// const imageDisplayController = require("./controllers/ImageDisplay")
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -53,7 +53,8 @@ app.use(
 app.use("/posts", postsController);
 app.use("/auth", authController);
 app.use("/users", userController);
-app.use("/uploads", uploadsController)
+app.use("./cloudinary", cloudinary)
+
 
 app.listen(PORT, () => {
   console.log(`Posting recipes!✅ PORT: ${PORT} 🌟`);

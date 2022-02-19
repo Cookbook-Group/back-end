@@ -18,7 +18,7 @@ The Premise: Instagram for food, post pictures with recipes, get ratings and com
 * Link posts and users for edit permissions/ delete permissions
 * Add comments linked to users, ratings/interactions
 * Advanced search features (tag searching, ingredients, calorie searching, categories...)
-* Multer.io for pictures of food.
+* Multer.io/Cloudinary  for pictures of food.
 * Social media buttons...guugghh
 
 ## User Stories
