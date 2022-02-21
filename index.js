@@ -20,6 +20,7 @@ const userController = require("./controllers/user");
 const uploadsController = require("./controllers/uploads");
 
 // const uploadImageController = require("./controllers/uploadImage")
+const searchControllers = require("./controllers/search")
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -57,6 +58,7 @@ app.use("/auth", authController);
 app.use("/users", userController);
 app.use("/uploads", uploadsController)
 // app.use("/load", uploadImageController)
+// app.use("/search", searchControllers)
 
 app.listen(PORT, () => {
   console.log(`Posting recipes!✅ PORT: ${PORT} 🌟`);
