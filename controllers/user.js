@@ -67,6 +67,16 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+//EDIT USER INFO
+router.put('/:id', (req,res) => {
+  User.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,updateUser) => {
+    if(err){
+      res.status(400).json(err)
+    }
+    res.status(200).json(updateUser)
+  })
+})
+
 
 // FOLLOW 
 router.put("/:id/follow", async (req, res) => {
