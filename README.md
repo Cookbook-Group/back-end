@@ -1,116 +1,25 @@
-# back-end 
-The Premise: Instagram for food, post pictures with recipes, get ratings and comments, search for recipes by parameters.
-
-## Working Titles
-
-* Social-mealdia
-
-
-## MVP 
-
-* Full CRUD
-* MERN
-* Working frontend react and backend componenets
-
-## Stretch Goals
-
-
-* Link posts and users for edit permissions/ delete permissions
-* Add comments linked to users, ratings/interactions
-* Advanced search features (tag searching, ingredients, calorie searching, categories...)
-* Multer.io for pictures of food.
-* Social media buttons...guugghh
-
-## User Stories
-
-* As a User, I can upload recipes with pictures
-* As a User, I can rate recipes
-* As a User, I want to be able to find reicpes by parameters
-* As a User, I want to be able to interact with users*
-* As a User, I want to be able to filter recipes
-
-## Models
-
-Posts;
-
-[
-    {
-        image:
-        name:
-        calories:
-        recipes: [
-         ingredients: []
-         instructions: []
-         recipeFacts: [
-            servings:
-            cooktime:
-         ]
-                 ]
-        timestamp:
-        likes: [+,-]
-    }
-]
-
-Users;
-
-[
-    email: ,
-    username: ,
-    password: ,
-    profile*:[
-      profileImage:,
-      about:,
-      name:
-    ]    
-]
-
-Basic frontend, Nick
-Basic Backend, Tamara
 
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-
-
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="https://res.cloudinary.com/dsruc2myl/image/upload/v1645483491/Project_3/zjjjr772beeecwbond4u.webp" alt="Logo" width="80" height="80">
+  <a href="https://social-meal-dia.herokuapp.com/">
+    <img src="https://res.cloudinary.com/dsruc2myl/image/upload/v1645483491/Project_3/zjjjr772beeecwbond4u.webp" alt="Logo" width="250" height="250">
   </a>
 
-
-<h3 align="center">Project 3 Social Meal-Dia</h3>
-
+<h3 align="center">Social Meal-Dia</h3>
 
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Cookbook-Group/front-end"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://social-meal-dia.herokuapp.com/">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/cookbook-group/front-end/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/cookbook-group/front-end/issues">Request Feature</a>
   </p>
 </div>
 
@@ -123,13 +32,14 @@ Basic Backend, Tamara
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#front-end">Front-end</a></li>
+        <li><a href="#screen-shot">Screen Shot</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -145,57 +55,84 @@ Basic Backend, Tamara
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+# About The Project
 
-[![Screen Shot][product-screenshot]](https://res.cloudinary.com/dsruc2myl/image/upload/c_scale,w_993/v1645480813/Project_3/q2ezmpgdbacfz95sr4ch.png)
+Do you like to cook?
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+Cooking is a universal language. Anyone who enjoys cooking knows that when you share a common interest like cooking with someone from a different culture, you can easily form a bond. It’s an amazing opportunity to share recipes and dishes and learn from different culinary traditions.
+
+This is Social-Meal-Dia, a MEARN stack social media app for posting pictures of your wonderful meals, sharing your faverite recipes, like and follow other users, searching and reviewing recipes with other people from all around the world!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Front-end
+Created with React.js
+The Premise: Instagram for food, post pictures with recipes, get ratings and comments, search for recipes by parameters, like and follow other users!
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Screen Shot
+* Log In page
+![D33BAF42-443A-4E59-A0EC-D6F69DD6C6C3_1_105_c](https://user-images.githubusercontent.com/91036693/155211955-cd24088c-75bd-446c-bfc0-9b8d8d837a70.jpeg)
+
+* Home page
+![2EA51F8A-2920-4FF3-A747-68D0BE157A3A_1_105_c](https://user-images.githubusercontent.com/91036693/155211996-394594d3-614e-4e34-b7bb-cbd62de9f78f.jpeg)
+
+* User page
+![FE9B52C2-DCC8-41F5-B50E-5DF558330A69_1_105_c](https://user-images.githubusercontent.com/91036693/155212019-c2d5b533-73bd-4517-9cc6-57fd15eced17.jpeg)
+
+
+![DB944E7A-A330-495A-A17B-C9EB1EB8911D_1_105_c](https://user-images.githubusercontent.com/91036693/155212167-0a868274-1e54-447c-b980-a086d66a68fb.jpeg)
+
+
+* Show recipes page
+![44EFC679-5F6C-48D0-8BBC-F119A66254D8_1_105_c](https://user-images.githubusercontent.com/91036693/155212184-838de191-b02e-4800-8d6e-2bd5b8138161.jpeg)
+
+
+* Search page
+![208AC49A-D63E-4B15-AECB-DDE3D786A088_1_105_c](https://user-images.githubusercontent.com/91036693/155212206-34d8584d-87e8-49e4-a010-d1a4a0689759.jpeg)
+
+
+## Original Wireframes
+<img width="1205" alt="6B782111-06E7-47DE-B724-616AA9866DAB" src="https://user-images.githubusercontent.com/91036693/155212522-c84b4095-f378-42a7-9484-c3b912b681fe.png">
+
+<img width="1210" alt="3B98AF00-C1AE-4CBF-A00C-2128B9DAE43D" src="https://user-images.githubusercontent.com/91036693/155212538-4420850a-eb10-4a50-91ad-ca32bd082d12.png">
+
+<img width="1213" alt="227F313E-D60A-4D2D-9006-D6B1CD979A1A" src="https://user-images.githubusercontent.com/91036693/155212553-8ca5c345-c70d-4350-af16-7c7a36cb18ca.png">
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
-* [Express](https://expressjs.com/)
-* [React.js](https://reactjs.org/)
-* [Node.js](https://nodejs.org/en/)
 * [MongoDB](https://www.mongodb.com/)
+* [Express.js](https://expressjs.com/)
+* [React.js](https://reactjs.org/)
+* [Node.js](https://nodejs.org/)
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [HTML5](https://svelte.dev/)
+* [SCSS](https://sass-lang.com/)
+* [Passport.js](https://www.passportjs.org/)
+* [Cloudinary](https://cloudinary.com/)
 
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
+# Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
-### Installation
+## Installation
 
-1. Get a free API Key at [https://cloudinary.com](https://cloudinary.com)
+1. Get a free API Key at [https://cloudinary.com](https://cloudinary.com/)
 2. Clone the repo
    ```sh
-   git clone  https://github.com/cookbook-group/back-end.git
+   git clone https://github.com/cookbook-group/front-end.git
    ```
 3. Install NPM packages
    ```sh
    npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -205,26 +142,43 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This social meal-dia app can be use to share food images, calories, ingredience, and recipies with other users. You also have the ability to like recepies, and follow other users.
+This social-meal-dia app can be use to share food images, calories, ingredience, and recipies with other users. You also have the ability to like recepies, and follow other users.
 
-
-
-
+_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- ROADMAP -->
-## Roadmap
+# Roadmap
 
-- [] Cloudinary Implementation
-- [] Smoother Data Population
-- [] Screening Selfies
-    - [] Nested Feature
+## MVP 
+- [x] Full CRUD
+- [x] MERN
+- [x] Working frontend react and backend componenets
+
+## Stretch Goals
+- [x] Link posts and users for edit permissions/ delete permissions
+- [x] Add linked to users, ratings/interactions
+- [ ] Add comments to users.
+- [x] Advanced search features (Posts, Users and link to other).
+- [x] Upload image in Cloudinary.
+- [ ] Link to other social media buttons.
+
+## User Stories
+- [x] As a User, I can Register and Log In
+- [x] As a User, I can upload my recipes
+- [x] As a User, I can upload recipes with pictures
+- [x] As a User, I can see other users recipes
+- [x] As a User, I can like other users recipes
+- [x] As a User, I want to be able to find reicpes by parameters
+- [x] As a User, I want to be able to interact with users*
+- [x] As a User, I want to be able to filter recipes
+- [x] As a user, I want to be able to fix the recipes if I make a mistake
 
 
-See the [open issues](https://github.com/cookbook-group/back-end/issues)) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/cookbook-group/front-end/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -260,20 +214,17 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Nicholas Tonelli - [@twitter_handle](https://twitter.com/twitter_handle) - nicholasevantonelli@gmail.com
+* Nicholas Tonelli - [LinkedIn](https://twitter.com/twitter_handle) -[nicholasevantonelli@gmail.com](nicholasevantonelli@gmail.com)
 
-Tamara Wilburn- [@linkedin handle] (https://www.linkedin.com/in/tamara-wilburn-905842227/ - TamaraAndreaWilburn@gmail.com
+* Tamara Wilburn- [LinkedIn](https://www.linkedin.com/in/tamara-wilburn-905842227/) -[TamaraAndreaWilburn@gmail.com](TamaraAndreaWilburn@gmail.com)
 
-Voravadee Rocco - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+* Voravadee Rocco - [LinkedIn](https://www.linkedin.com/in/voravadee-rocco) -[vora.rocco@gmail.com](vora.rocco@gmail.com)
 
-Winnie Bolm  - [@linkedin_handle](https://www.linkedin.com/in/winniebolm/) - winnie.bolm@gmail.com
+* Winnie Bolm  - [LinkedIn](https://www.linkedin.com/in/winniebolm/)  -[winnie.bolm@gmail.com](winnie.bolm@gmail.com)
 
-Project Link: [https://github.com/cookbook-group/back-end](https://github.com/cookbook-group/back-end)
+Project Link: [https://github.com/cookbook-group](https://github.com/cookbook-group)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+View Demo: [https://social-meal-dia.herokuapp.com/](https://social-meal-dia.herokuapp.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -282,9 +233,16 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [General Assembly 9/28 SEI-Flex](https://generalassemb.ly/)
+* Billie Heidelberg - SEI Lead
+* Matt Keane - Instructional Associate
+* Paresh Sharma - Instructional Associate
+* Nicholas Tonelli (for conceptulizing/bringing to life of the app)
+* Tamara Wilburn (for conceptulizing/bringing to life of the app)
+* Voravadee Rocco (for conceptulizing/bringing to life of the app)
+* Winnie Bolm (for conceptulizing/bringing to life of the app)
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -293,15 +251,16 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
+[contributors-url]: https://github.com/cookbook-group/front-end/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
+[forks-url]: https://github.com/cookbook-group/front-end/network/members
 [stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
+[stars-url]: https://github.com/cookbook-group/front-end/stargazers
 [issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
+[issues-url]: https://github.com/cookbook-group/front-end/issues
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[license-url]: https://github.com/cookbook-group/front-end/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: image/screenshot.png
+
