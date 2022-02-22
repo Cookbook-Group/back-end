@@ -69,7 +69,6 @@ router.put('/:id', (req,res) => {
       if(err){
           res.status(400).json({err: err.message})
       }
-      // res.status(200).json(updatedHoliday)
       Posts.find({}).populate('user') 
       .exec((err,allPosts)  => {
           res.status(200).json(allPosts)
@@ -77,6 +76,7 @@ router.put('/:id', (req,res) => {
       
   })
 })
+
 // router.put("/:id", async (req, res) => {
 //   try {
 //     const post = await Posts.findById(req.params.id)
