@@ -99,10 +99,10 @@ Basic Backend, Tamara
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://res.cloudinary.com/dsruc2myl/image/upload/v1645483491/Project_3/zjjjr772beeecwbond4u.webp" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Projecr 3 Social Meal-Dia</h3>
 
   <p align="center">
     project_description
