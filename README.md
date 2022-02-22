@@ -10,7 +10,7 @@
 <h3 align="center">Social Meal-Dia</h3>
 
   <p align="center">
-    project_description
+   a MERN stack social media app for posting pictures of your wonderful meals
     <br />
     <a href="https://github.com/Cookbook-Group/front-end"><strong>Explore the docs »</strong></a>
     <br />
@@ -61,7 +61,7 @@ Do you like to cook?
 
 Cooking is a universal language. Anyone who enjoys cooking knows that when you share a common interest like cooking with someone from a different culture, you can easily form a bond. It’s an amazing opportunity to share recipes and dishes and learn from different culinary traditions.
 
-This is Social-Meal-Dia, a MEARN stack social media app for posting pictures of your wonderful meals, sharing your faverite recipes, like and follow other users, searching and reviewing recipes with other people from all around the world!
+This is Social-Meal-Dia, a MERN stack social media app for posting pictures of your wonderful meals, sharing your faverite recipes, like and follow other users, searching and reviewing recipes with other people from all around the world!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
