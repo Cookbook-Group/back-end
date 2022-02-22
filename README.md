@@ -86,12 +86,6 @@ Basic Backend, Tamara
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -99,10 +93,10 @@ Basic Backend, Tamara
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://res.cloudinary.com/dsruc2myl/image/upload/v1645483491/Project_3/zjjjr772beeecwbond4u.webp" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Project 3 Social Meal-Dia</h3>
 
   <p align="center">
     project_description
@@ -151,7 +145,7 @@ Basic Backend, Tamara
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Screen Shot][product-screenshot]](https://res.cloudinary.com/dsruc2myl/image/upload/c_scale,w_993/v1645480813/Project_3/q2ezmpgdbacfz95sr4ch.png)
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
 
@@ -161,14 +155,12 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
+* [Express](https://expressjs.com/)
 * [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Node.js](https://nodejs.org/en/)
+* [MongoDB](https://www.mongodb.com/)
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -190,10 +182,10 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [https://cloudinary.com](https://cloudinary.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone  https://github.com/cookbook-group/back-end.git
    ```
 3. Install NPM packages
    ```sh
@@ -211,9 +203,11 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+This social meal-dia app can be use to share food images, calories, ingredience, and recipies with other users. You also have the ability to like recepies, and follow other users.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -222,12 +216,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
+- [] Cloudinary Implementation
+- [] Smoother Data Population
+- [] Screening Selfies
     - [] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+
+See the [open issues](https://github.com/cookbook-group/back-end/issues)) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -263,7 +258,18 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Nicholas Tonelli - [@twitter_handle](https://twitter.com/twitter_handle) - nicholasevantonelli@gmail.com
+
+Tamara Wilburn- [@linkedin handle] (https://www.linkedin.com/in/tamara-wilburn-905842227/ - TamaraAndreaWilburn@gmail.com
+
+Voravadee Rocco - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+
+Winnie Bolm  - [@linkedin_handle](https://www.linkedin.com/in/winniebolm/) - winnie.bolm@gmail.com
+
+Project Link: [https://github.com/cookbook-group/back-end](https://github.com/cookbook-group/back-end)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
